@@ -22,6 +22,7 @@
 		0CEB43C4196C328100E7F9CF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB43A8196C328100E7F9CF /* CoreData.framework */; };
 		0CEB43CC196C328100E7F9CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB43CA196C328100E7F9CF /* InfoPlist.strings */; };
 		0CEB43CE196C328100E7F9CF /* MyFlickrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43CD196C328100E7F9CF /* MyFlickrTests.m */; };
+		0CEB43D9196C333F00E7F9CF /* ReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43D8196C333F00E7F9CF /* ReaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0CEB43C9196C328100E7F9CF /* MyFlickrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFlickrTests-Info.plist"; sourceTree = "<group>"; };
 		0CEB43CB196C328100E7F9CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CEB43CD196C328100E7F9CF /* MyFlickrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlickrTests.m; sourceTree = "<group>"; };
+		0CEB43D7196C333F00E7F9CF /* ReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderView.h; sourceTree = "<group>"; };
+		0CEB43D8196C333F00E7F9CF /* ReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		0CEB43AA196C328100E7F9CF /* MyFlickr */ = {
 			isa = PBXGroup;
 			children = (
+				0CEB43DA196C334500E7F9CF /* Reader */,
 				0CEB43B3196C328100E7F9CF /* AppDelegate.h */,
 				0CEB43B4196C328100E7F9CF /* AppDelegate.m */,
 				0CEB43B9196C328100E7F9CF /* Images.xcassets */,
@@ -151,6 +155,15 @@
 				0CEB43CA196C328100E7F9CF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CEB43DA196C334500E7F9CF /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				0CEB43D7196C333F00E7F9CF /* ReaderView.h */,
+				0CEB43D8196C333F00E7F9CF /* ReaderView.m */,
+			);
+			name = Reader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEB43B8196C328100E7F9CF /* MyFlickr.xcdatamodeld in Sources */,
+				0CEB43D9196C333F00E7F9CF /* ReaderView.m in Sources */,
 				0CEB43B5196C328100E7F9CF /* AppDelegate.m in Sources */,
 				0CEB43B1196C328100E7F9CF /* main.m in Sources */,
 			);
@@ -447,6 +461,7 @@
 				0CEB43D3196C328100E7F9CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CEB43D4196C328100E7F9CF /* Build configuration list for PBXNativeTarget "MyFlickrTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +470,7 @@
 				0CEB43D6196C328100E7F9CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
