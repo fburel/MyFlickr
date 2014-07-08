@@ -23,6 +23,7 @@
 		0CEB43CC196C328100E7F9CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB43CA196C328100E7F9CF /* InfoPlist.strings */; };
 		0CEB43CE196C328100E7F9CF /* MyFlickrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43CD196C328100E7F9CF /* MyFlickrTests.m */; };
 		0CEB43D9196C333F00E7F9CF /* ReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43D8196C333F00E7F9CF /* ReaderView.m */; };
+		0CEB43DC196C39D500E7F9CF /* Storyboard_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB43DB196C39D500E7F9CF /* Storyboard_iphone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		0CEB43CD196C328100E7F9CF /* MyFlickrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFlickrTests.m; sourceTree = "<group>"; };
 		0CEB43D7196C333F00E7F9CF /* ReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderView.h; sourceTree = "<group>"; };
 		0CEB43D8196C333F00E7F9CF /* ReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderView.m; sourceTree = "<group>"; };
+		0CEB43DB196C39D500E7F9CF /* Storyboard_iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iphone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0CEB43B4196C328100E7F9CF /* AppDelegate.m */,
 				0CEB43B9196C328100E7F9CF /* Images.xcassets */,
 				0CEB43B6196C328100E7F9CF /* MyFlickr.xcdatamodeld */,
+				0CEB43DB196C39D500E7F9CF /* Storyboard_iphone.storyboard */,
 				0CEB43AB196C328100E7F9CF /* Supporting Files */,
 			);
 			path = MyFlickr;
@@ -243,6 +246,7 @@
 			files = (
 				0CEB43AF196C328100E7F9CF /* InfoPlist.strings in Resources */,
 				0CEB43BA196C328100E7F9CF /* Images.xcassets in Resources */,
+				0CEB43DC196C39D500E7F9CF /* Storyboard_iphone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
