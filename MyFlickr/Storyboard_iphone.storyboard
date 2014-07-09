@@ -61,7 +61,20 @@
                     <view key="view" contentMode="scaleToFill" id="vw9-Kw-LQ5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-CH-PMe" customClass="ReaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tmd-CH-PMe" secondAttribute="trailing" id="0lH-Hb-EyI"/>
+                            <constraint firstItem="4RG-Hf-Sc1" firstAttribute="top" secondItem="tmd-CH-PMe" secondAttribute="bottom" id="Lfq-yk-YqL"/>
+                            <constraint firstItem="tmd-CH-PMe" firstAttribute="leading" secondItem="vw9-Kw-LQ5" secondAttribute="leading" id="OFc-it-U3P"/>
+                            <constraint firstItem="tmd-CH-PMe" firstAttribute="top" secondItem="vw9-Kw-LQ5" secondAttribute="top" id="a86-4P-4Ag"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="092-Qx-gI9"/>
                 </viewController>
