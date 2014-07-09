@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef struct {
+    double longitude;
+    double latitude;
+} PictureFetcherLocation;
+
 @interface FlickrPictureFetcher : NSObject
+
+
+- (NSArray *) picturesAroundLocation:(PictureFetcherLocation)location;
 
 @end

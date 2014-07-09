@@ -26,6 +26,7 @@
 		0CEB43DC196C39D500E7F9CF /* Storyboard_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB43DB196C39D500E7F9CF /* Storyboard_iphone.storyboard */; };
 		0CEB43DF196D424B00E7F9CF /* PictureCarrousselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43DE196D424B00E7F9CF /* PictureCarrousselViewController.m */; };
 		0CEB43E5196D459500E7F9CF /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43E4196D459500E7F9CF /* Picture.m */; };
+		0CEB43E8196D46B300E7F9CF /* FlickrPictureFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB43E7196D46B300E7F9CF /* FlickrPictureFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		0CEB43DE196D424B00E7F9CF /* PictureCarrousselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCarrousselViewController.m; sourceTree = "<group>"; };
 		0CEB43E3196D459500E7F9CF /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		0CEB43E4196D459500E7F9CF /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		0CEB43E6196D46B300E7F9CF /* FlickrPictureFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPictureFetcher.h; sourceTree = "<group>"; };
+		0CEB43E7196D46B300E7F9CF /* FlickrPictureFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPictureFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 				0CEB43B6196C328100E7F9CF /* MyFlickr.xcdatamodeld */,
 				0CEB43E3196D459500E7F9CF /* Picture.h */,
 				0CEB43E4196D459500E7F9CF /* Picture.m */,
+				0CEB43E6196D46B300E7F9CF /* FlickrPictureFetcher.h */,
+				0CEB43E7196D46B300E7F9CF /* FlickrPictureFetcher.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEB43E5196D459500E7F9CF /* Picture.m in Sources */,
+				0CEB43E8196D46B300E7F9CF /* FlickrPictureFetcher.m in Sources */,
 				0CEB43B8196C328100E7F9CF /* MyFlickr.xcdatamodeld in Sources */,
 				0CEB43D9196C333F00E7F9CF /* ReaderView.m in Sources */,
 				0CEB43DF196D424B00E7F9CF /* PictureCarrousselViewController.m in Sources */,
