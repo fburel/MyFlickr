@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-226" y="206"/>
         </scene>
-        <!--View Controller-->
+        <!--Picture Carroussel View Controller-->
         <scene sceneID="s8A-44-iOA">
             <objects>
-                <viewController id="reA-4r-kAV" sceneMemberID="viewController">
+                <viewController id="reA-4r-kAV" customClass="PictureCarrousselViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpq-16-VDf"/>
                         <viewControllerLayoutGuide type="bottom" id="4RG-Hf-Sc1"/>
@@ -77,6 +77,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="092-Qx-gI9"/>
+                    <connections>
+                        <outlet property="readerView" destination="tmd-CH-PMe" id="1In-Y8-PM4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXy-cY-FVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

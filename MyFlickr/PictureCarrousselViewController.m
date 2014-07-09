@@ -7,43 +7,70 @@
 //
 
 #import "PictureCarrousselViewController.h"
+#import "ReaderView.h"
+#import "Picture.h"
+#import "FlickrPictureFetcher.h"
 
 @interface PictureCarrousselViewController ()
+<ReaderViewDelegate>
+
+@property (weak, nonatomic) IBOutlet ReaderView *readerView;
+@property (strong, nonatomic) NSArray * pictures;
 
 @end
 
 @implementation PictureCarrousselViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Temporaire : creation d'une position par défaut
+    PictureFetcherLocation kazantip;
+    kazantip.latitude = 45.29194;
+    kazantip.longitude = 33.03833;
+    
+    // Recuperation de la liste des photos
+    FlickrPictureFetcher * fetcher = [FlickrPictureFetcher new];
+    self.pictures = [fetcher picturesAroundLocation:kazantip];
+    
+    self.readerView.delegate = self;
+
 }
 
-- (void)didReceiveMemoryWarning
+- (int)numberOfPages
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return self.pictures.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (UIView *)viewForPageAtIndex:(NSInteger)idx
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    Picture * p = self.pictures[idx];
+    NSData * imageData = [NSData dataWithContentsOfURL:p.url]; // telechargement!
+    UIImage * emile = [UIImage imageWithData:imageData];
+    
+    UIImageView * imageView = [[UIImageView alloc]initWithImage:emile];
+    
+    return imageView;
 }
-*/
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
