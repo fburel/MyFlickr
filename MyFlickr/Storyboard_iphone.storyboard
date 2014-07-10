@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fWE-yB-J5R">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-a4-NF8">
                                 <rect key="frame" x="130" y="269" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="click me">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,23 +59,39 @@
                         <viewControllerLayoutGuide type="bottom" id="4RG-Hf-Sc1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vw9-Kw-LQ5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-CH-PMe" customClass="ReaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9gX-fx-daq">
+                                <rect key="frame" x="20" y="242" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Récupération des photos en cours..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b1q-07-rAm">
+                                <rect key="frame" x="48" y="242" width="252" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="Uo4-LE-p3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-CH-PMe" customClass="ReaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tmd-CH-PMe" secondAttribute="trailing" id="0lH-Hb-EyI"/>
+                            <constraint firstItem="b1q-07-rAm" firstAttribute="top" secondItem="9gX-fx-daq" secondAttribute="top" id="A9A-6k-6zA"/>
                             <constraint firstItem="4RG-Hf-Sc1" firstAttribute="top" secondItem="tmd-CH-PMe" secondAttribute="bottom" id="Lfq-yk-YqL"/>
                             <constraint firstItem="tmd-CH-PMe" firstAttribute="leading" secondItem="vw9-Kw-LQ5" secondAttribute="leading" id="OFc-it-U3P"/>
+                            <constraint firstItem="b1q-07-rAm" firstAttribute="centerY" secondItem="vw9-Kw-LQ5" secondAttribute="centerY" id="Zt1-ig-yQZ"/>
                             <constraint firstItem="tmd-CH-PMe" firstAttribute="top" secondItem="vw9-Kw-LQ5" secondAttribute="top" id="a86-4P-4Ag"/>
+                            <constraint firstAttribute="trailing" secondItem="b1q-07-rAm" secondAttribute="trailing" constant="20" symbolic="YES" id="nCm-Ct-mV9"/>
+                            <constraint firstItem="b1q-07-rAm" firstAttribute="leading" secondItem="9gX-fx-daq" secondAttribute="trailing" constant="8" symbolic="YES" id="zSf-Id-lmP"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="092-Qx-gI9"/>
                     <connections>
                         <outlet property="readerView" destination="tmd-CH-PMe" id="1In-Y8-PM4"/>

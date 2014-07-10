@@ -31,9 +31,18 @@
     kazantip.latitude = 45.29194;
     kazantip.longitude = 33.03833;
     
+    self.readerView.hidden = YES;
+    
     // Recuperation de la liste des photos
     FlickrPictureFetcher * fetcher = [FlickrPictureFetcher new];
-    self.pictures = [fetcher picturesAroundLocation:kazantip];
+    [fetcher pictureAroundLocation:kazantip completion:^(NSArray *pictures)
+    {
+        self.pictures = pictures;
+        
+        self.readerView.hidden = NO;
+        
+        [self.readerView displayPageAtIndex:0 animated:NO];
+    }];
     
     self.readerView.delegate = self;
 
@@ -51,6 +60,7 @@
     UIImage * emile = [UIImage imageWithData:imageData];
     
     UIImageView * imageView = [[UIImageView alloc]initWithImage:emile];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     return imageView;
 }

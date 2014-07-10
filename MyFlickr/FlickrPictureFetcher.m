@@ -10,7 +10,7 @@
 #import "Picture.h"
 
 
-#define     API_KEY     @"ABCDEF"
+#define     API_KEY     @"edd17c0c4d413be050ffdba18c74c0e1"
 
 @implementation FlickrPictureFetcher
 
@@ -48,6 +48,24 @@
     return [pictures copy];
 }
 
+- (void)pictureAroundLocation:(PictureFetcherLocation)location completion:(CompletionBlock)completion
+{
+    
+    dispatch_queue_t backGroundQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    
+    dispatch_async(backGroundQ, ^{
+        
+        NSArray * pictures = [self picturesAroundLocation:location];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(pictures);
+        });
+        
+
+    });
+    
+    
+}
 @end
 
 
