@@ -7,22 +7,39 @@
 //
 
 #import "City+DAO.h"
+#import "AppDelegate.h"
 
 @implementation City (DAO)
 
-+ (void) delete:(City *)city
++ (NSManagedObjectContext *)context
 {
+    static NSManagedObjectContext * __Context;
     
+    if(!__Context)
+    {
+        AppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+        __Context = appDelegate.managedObjectContext;
+    }
+    return __Context;
+}
+
++ (City *)new
+{
+    City * city = [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:[self context]];
+    
+    
+    
+    return city;
+}
+
++ (void)delete:(City *)city
+{
+    [[self context] deleteObject:city];
 }
 
 + (NSArray *) allCities
 {
-    
+    NSFetchRequest * request = [[NSFetchRequest alloc]initWithEntityName:@"City"];
+    return [[self context] executeFetchRequest:request error:nil];
 }
-
-+ (City *) new
-{
-    
-}
-
 @end
