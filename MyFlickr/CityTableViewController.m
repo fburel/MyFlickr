@@ -19,7 +19,12 @@
 
 - (IBAction)addCity:(id)sender
 {
+    // Inserer une nouvelle ville en base
     
+    // Ajouter la ville a l'array self.cities
+    
+    // Rafraichir la tableView
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -27,6 +32,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
+    
+    // recuperation de la liste de ville
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -47,7 +55,14 @@
     
     // Recuperation de la city
     
-    return nil;
+    // Recuperation d'une cellule
+    UITableViewCell * cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL" forIndexPath:indexPath];
+    
+    // Configurer la cellule
+    
+    
+    return cell;
 }
 
 @end
