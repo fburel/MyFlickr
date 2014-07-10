@@ -8,9 +8,10 @@
 
 #import "CityTableViewController.h"
 
-@interface CityTableViewController ()
+@interface CityTableViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray * cities;
 
 @end
 
@@ -25,6 +26,44 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.dataSource = self;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.cities.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int position = indexPath.row;
+    
+    // Recuperation de la city
+    
+    return nil;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
