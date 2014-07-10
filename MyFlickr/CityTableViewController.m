@@ -7,11 +7,12 @@
 //
 
 #import "CityTableViewController.h"
+#import "City+DAO.h"
 
 @interface CityTableViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray * cities;
+@property (strong, nonatomic) NSMutableArray * cities;
 
 @end
 
@@ -20,8 +21,10 @@
 - (IBAction)addCity:(id)sender
 {
     // Inserer une nouvelle ville en base
+    City * c = [City new];
     
     // Ajouter la ville a l'array self.cities
+    [self.cities addObject:c];
     
     // Rafraichir la tableView
     [self.tableView reloadData];
@@ -34,6 +37,7 @@
     self.tableView.dataSource = self;
     
     // recuperation de la liste de ville
+    self.cities = [[City allCities] mutableCopy];
     
 }
 
@@ -54,12 +58,14 @@
     int position = indexPath.row;
     
     // Recuperation de la city
+    City * c = self.cities[position];
     
     // Recuperation d'une cellule
     UITableViewCell * cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL" forIndexPath:indexPath];
     
     // Configurer la cellule
+    cell.textLabel.text = c.name;
     
     
     return cell;
