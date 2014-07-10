@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dJB-UX-joG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dJB-UX-joG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,6 +46,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dJB-UX-joG" firstAttribute="leading" secondItem="7HV-Rd-goX" secondAttribute="leading" id="4pO-U5-aqa"/>
+                            <constraint firstItem="dJB-UX-joG" firstAttribute="top" secondItem="7HV-Rd-goX" secondAttribute="top" id="TmW-81-cuH"/>
+                            <constraint firstItem="LT2-cc-ntt" firstAttribute="top" secondItem="dJB-UX-joG" secondAttribute="bottom" id="XA5-2o-iYE"/>
+                            <constraint firstAttribute="trailing" secondItem="dJB-UX-joG" secondAttribute="trailing" id="ivj-Ff-ul4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QWS-cd-giI">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="pQE-Nc-Zlh">

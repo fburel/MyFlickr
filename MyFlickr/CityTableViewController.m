@@ -71,6 +71,20 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int position = indexPath.row;
+    
+    // Recuperation de la city
+    City * c = self.cities[position];
+    
+    [City delete:c];
+    
+    [self.cities removeObject:c];
+    
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
 @end
 
 
