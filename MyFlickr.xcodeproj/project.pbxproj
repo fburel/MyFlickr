@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3D06C5196E7EB3009639B4 /* CityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D06C4196E7EB3009639B4 /* CityTableViewController.m */; };
 		0CEB43A3196C328100E7F9CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB43A2196C328100E7F9CF /* Foundation.framework */; };
 		0CEB43A5196C328100E7F9CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB43A4196C328100E7F9CF /* CoreGraphics.framework */; };
 		0CEB43A7196C328100E7F9CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB43A6196C328100E7F9CF /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3D06C3196E7EB3009639B4 /* CityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewController.h; sourceTree = "<group>"; };
+		0C3D06C4196E7EB3009639B4 /* CityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewController.m; sourceTree = "<group>"; };
 		0CEB439F196C328100E7F9CF /* MyFlickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFlickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEB43A2196C328100E7F9CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CEB43A4196C328100E7F9CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 			children = (
 				0CEB43DD196D424B00E7F9CF /* PictureCarrousselViewController.h */,
 				0CEB43DE196D424B00E7F9CF /* PictureCarrousselViewController.m */,
+				0C3D06C3196E7EB3009639B4 /* CityTableViewController.h */,
+				0C3D06C4196E7EB3009639B4 /* CityTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				0CEB43E8196D46B300E7F9CF /* FlickrPictureFetcher.m in Sources */,
 				0CEB43B8196C328100E7F9CF /* MyFlickr.xcdatamodeld in Sources */,
 				0CEB43D9196C333F00E7F9CF /* ReaderView.m in Sources */,
+				0C3D06C5196E7EB3009639B4 /* CityTableViewController.m in Sources */,
 				0CEB43DF196D424B00E7F9CF /* PictureCarrousselViewController.m in Sources */,
 				0CEB43B5196C328100E7F9CF /* AppDelegate.m in Sources */,
 				0CEB43B1196C328100E7F9CF /* main.m in Sources */,
