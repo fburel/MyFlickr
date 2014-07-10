@@ -8,6 +8,7 @@
 
 #import "CityTableViewController.h"
 #import "City+DAO.h"
+#import "PictureCarrousselViewController.h"
 
 @interface CityTableViewController () <UITableViewDataSource>
 
@@ -85,6 +86,21 @@
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"CITY_SELECTED"])
+    {
+        // Recuperation de la ville
+        NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+        City * c = self.cities[indexPath.row];
+        
+        // Passage de la ville au CarousselVC
+        PictureCarrousselViewController * pvc = segue.destinationViewController;
+        pvc.city = c;
+    }
+}
 @end
 
 

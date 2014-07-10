@@ -39,7 +39,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="reA-4r-kAV" kind="push" id="Ei2-Je-ejf"/>
+                                            <segue destination="reA-4r-kAV" kind="push" identifier="CITY_SELECTED" id="Ei2-Je-ejf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

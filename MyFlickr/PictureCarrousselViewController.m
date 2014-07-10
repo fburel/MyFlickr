@@ -26,16 +26,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Temporaire : creation d'une position par défaut
-    PictureFetcherLocation kazantip;
-    kazantip.latitude = 45.29194;
-    kazantip.longitude = 33.03833;
+    
+    PictureFetcherLocation location;
+    location.latitude = self.city.latitude.doubleValue;
+    location.longitude = self.city.longitude.doubleValue;
     
     self.readerView.hidden = YES;
     
     // Recuperation de la liste des photos
     FlickrPictureFetcher * fetcher = [FlickrPictureFetcher new];
-    [fetcher pictureAroundLocation:kazantip completion:^(NSArray *pictures)
+    [fetcher pictureAroundLocation:location completion:^(NSArray *pictures)
     {
         self.pictures = pictures;
         
