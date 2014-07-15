@@ -42,6 +42,36 @@
                                             <segue destination="reA-4r-kAV" kind="push" identifier="CITY_SELECTED" id="Ei2-Je-ejf"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LOCALISATION_EN_COURS" id="gcQ-jv-biL">
+                                        <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gcQ-jv-biL" id="DH8-ug-HXt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patientez s'il vous plait" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-rn-0Tm">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-1G-1Hj">
+                                                    <rect key="frame" x="280" y="12" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eS7-1G-1Hj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zvf-rn-0Tm" secondAttribute="trailing" constant="8" symbolic="YES" id="A1k-Fq-zrE"/>
+                                                <constraint firstItem="zvf-rn-0Tm" firstAttribute="leading" secondItem="DH8-ug-HXt" secondAttribute="leading" constant="20" id="Eem-bT-qNi"/>
+                                                <constraint firstItem="zvf-rn-0Tm" firstAttribute="top" secondItem="DH8-ug-HXt" secondAttribute="top" constant="11" id="WHA-sz-3Du"/>
+                                                <constraint firstAttribute="trailing" secondItem="eS7-1G-1Hj" secondAttribute="trailing" constant="20" id="eHm-93-rmt"/>
+                                                <constraint firstAttribute="bottom" secondItem="zvf-rn-0Tm" secondAttribute="bottom" constant="11" id="ftR-Wm-MKn"/>
+                                                <constraint firstItem="eS7-1G-1Hj" firstAttribute="top" secondItem="DH8-ug-HXt" secondAttribute="top" constant="12" id="ieE-mi-Byb"/>
+                                                <constraint firstAttribute="bottom" secondItem="eS7-1G-1Hj" secondAttribute="bottom" constant="11" id="nyr-BE-m02"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

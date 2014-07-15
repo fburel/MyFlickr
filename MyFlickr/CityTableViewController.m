@@ -29,6 +29,10 @@
     
     // Rafraichir la tableView
     [self.tableView reloadData];
+    
+    // Ajout d'un observer sur le name de la city
+    [c addObserver:self forKeyPath:@"name" options:0 context:nil];
+    
 }
 
 - (void)viewDidLoad
@@ -63,12 +67,17 @@
     
     // Recuperation d'une cellule
     UITableViewCell * cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL" forIndexPath:indexPath];
-    
-    // Configurer la cellule
-    cell.textLabel.text = c.name;
-    
-    
+    if(c.name)
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL" forIndexPath:indexPath];
+     
+        cell.textLabel.text = c.name;
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"LOCALISATION_EN_COURS" forIndexPath:indexPath];
+    }
+   
     return cell;
 }
 
@@ -101,6 +110,15 @@
         pvc.city = c;
     }
 }
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    [self.tableView reloadData];
+    [object removeObserver:self forKeyPath:keyPath];
+}
+
 @end
 
 

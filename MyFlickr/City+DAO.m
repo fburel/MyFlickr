@@ -9,6 +9,7 @@
 #import "City+DAO.h"
 #import "AppDelegate.h"
 
+
 @implementation City (DAO)
 
 + (NSManagedObjectContext *)context
@@ -27,18 +28,10 @@
 {
     City * city = [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:[self context]];
     
-    if(random() % 2 == 0)
-    {
-        city.name = @"Kazantip";
-        city.longitude = @(33.03833);
-        city.latitude = @(45.29194);
-    }
-    else
-    {
-        city.name = @"Londres";
-        city.longitude = @(-0.07857);
-        city.latitude = @(51.504872);
-    }
+    
+    /* 
+     LOCALISATION + REVERSE GEOCODING
+     */
     
     
     return city;
