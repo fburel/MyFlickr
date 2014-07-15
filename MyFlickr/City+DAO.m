@@ -9,6 +9,7 @@
 #import "City+DAO.h"
 #import "AppDelegate.h"
 
+#import "Localizer.h"
 
 @implementation City (DAO)
 
@@ -32,7 +33,8 @@
     /* 
      LOCALISATION + REVERSE GEOCODING
      */
-    
+    Localizer * l = [Localizer sharedInstance];
+    [l startUpdatingLocationForCity:city];
     
     return city;
 }
